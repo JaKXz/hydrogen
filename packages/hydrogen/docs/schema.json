@@ -1,0 +1,1404 @@
+Analysis will use the bundled TypeScript version 4.5.5
+*** The target project appears to use TypeScript 4.6.2 which is newer than the bundled compiler engine; consider upgrading API Extractor.
+[
+  {
+    "content": [
+      [
+        "The `AddToCartButton` component renders a button that adds an item to the cart when pressed. It must be a descendent of the `CartProvider` component.  "
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ]
+    ],
+    "title": "AddToCartButton()"
+  },
+  {
+    "content": [
+      [
+        "AddToCartButtonProps.variantId",
+        "The ID of the variant. "
+      ],
+      [
+        "AddToCartButtonProps.variantId",
+        ""
+      ],
+      [
+        "AddToCartButtonProps.variantId",
+        ""
+      ],
+      [
+        "AddToCartButtonProps.variantId",
+        ""
+      ]
+    ],
+    "title": "AddToCartButtonProps"
+  },
+  {
+    "content": [
+      [
+        "The `BuyNowButton` component renders a button that adds an item to the cart and redirects the customer to checkout. "
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ]
+    ],
+    "title": "BuyNowButton()"
+  },
+  {
+    "content": [
+      [
+        "BuyNowButtonProps.variantId",
+        "The ID of the variant. "
+      ],
+      [
+        "BuyNowButtonProps.variantId",
+        ""
+      ],
+      [
+        "BuyNowButtonProps.variantId",
+        ""
+      ],
+      [
+        "BuyNowButtonProps.variantId",
+        ""
+      ]
+    ],
+    "title": "BuyNowButtonProps"
+  },
+  {
+    "content": [],
+    "title": "CacheCustom()"
+  },
+  {
+    "content": [],
+    "title": "CacheDays()"
+  },
+  {
+    "content": [],
+    "title": "CacheHours()"
+  },
+  {
+    "content": [],
+    "title": "CacheMinutes()"
+  },
+  {
+    "content": [],
+    "title": "CacheMonths()"
+  },
+  {
+    "content": [],
+    "title": "CacheSeconds()"
+  },
+  {
+    "content": [],
+    "title": "CacheWeeks()"
+  },
+  {
+    "content": [
+      [
+        "Cart.note",
+        "The cart's note. "
+      ],
+      [
+        "Cart.note",
+        ""
+      ],
+      [
+        "Cart.note",
+        ""
+      ],
+      [
+        "Cart.note",
+        ""
+      ]
+    ],
+    "title": "Cart"
+  },
+  {
+    "content": [],
+    "title": "CartAction"
+  },
+  {
+    "content": [
+      [
+        "The `CartCheckoutButton` component renders a button that redirects to the checkout URL for the cart. It must be a descendent of a `CartProvider` component. "
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ]
+    ],
+    "title": "CartCheckoutButton()"
+  },
+  {
+    "content": [
+      [
+        "The `CartEstimatedCost` component renders a `Money` component with the cost associated with the `amountType` prop. If no `amountType` prop is specified, then it defaults to `totalAmount`. If `children` is a function, then it will pass down the render props provided by the parent component. "
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ]
+    ],
+    "title": "CartEstimatedCost()"
+  },
+  {
+    "content": [
+      [
+        "CartEstimatedCostProps.children",
+        "A function that takes an object return by the `useMoney` hook and returns a `ReactNode`. "
+      ],
+      [
+        "CartEstimatedCostProps.children",
+        ""
+      ],
+      [
+        "CartEstimatedCostProps.children",
+        ""
+      ],
+      [
+        "CartEstimatedCostProps.children",
+        ""
+      ]
+    ],
+    "title": "CartEstimatedCostProps"
+  },
+  {
+    "content": [
+      [
+        "The `CartLineImage` component renders an `Image` component for the cart line merchandise's image. It must be a descendent of a `CartLineProvider` component. "
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ]
+    ],
+    "title": "CartLineImage()"
+  },
+  {
+    "content": [
+      [
+        "The `CartLinePrice` component renders a `Money` component for the cart line merchandise's price or compare at price. It must be a descendent of a `CartLineProvider` component. "
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ]
+    ],
+    "title": "CartLinePrice()"
+  },
+  {
+    "content": [
+      [
+        "CartLinePriceProps.priceType",
+        "The type of price. Valid values:`regular` (default) or `compareAt`. "
+      ],
+      [
+        "CartLinePriceProps.priceType",
+        ""
+      ],
+      [
+        "CartLinePriceProps.priceType",
+        ""
+      ],
+      [
+        "CartLinePriceProps.priceType",
+        ""
+      ]
+    ],
+    "title": "CartLinePriceProps"
+  },
+  {
+    "content": [
+      [
+        "The `CartLineProductTitle` component renders a `span` element (or the type of HTML element specified by the `as` prop) with the cart line merchandise's title. It must be a descendent of a `CartLineProvider` component. "
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ]
+    ],
+    "title": "CartLineProductTitle()"
+  },
+  {
+    "content": [
+      [
+        "The `CartLineProvider` component creates a context for using a cart line. "
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ]
+    ],
+    "title": "CartLineProvider()"
+  },
+  {
+    "content": [
+      [
+        "CartLineProviderProps.line",
+        "A cart line object. "
+      ],
+      [
+        "CartLineProviderProps.line",
+        ""
+      ],
+      [
+        "CartLineProviderProps.line",
+        ""
+      ],
+      [
+        "CartLineProviderProps.line",
+        ""
+      ]
+    ],
+    "title": "CartLineProviderProps"
+  },
+  {
+    "content": [
+      [
+        "The `CartLineQuantity` component renders a `span` element (or the type of HTML element specified by the `as` prop) with the cart line's quantity. It must be a descendent of a `CartLineProvider` component. "
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ]
+    ],
+    "title": "CartLineQuantity()"
+  },
+  {
+    "content": [
+      [
+        "The `CartLineQuantityAdjustButton` component renders a button that adjusts the cart line's quantity when pressed. It must be a descendent of a `CartLineProvider` component. "
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ]
+    ],
+    "title": "CartLineQuantityAdjustButton()"
+  },
+  {
+    "content": [
+      [
+        "The `CartLines` component iterates over each cart line and renders its `children` within a `CartLineProvider` for each cart line. "
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ]
+    ],
+    "title": "CartLines()"
+  },
+  {
+    "content": [
+      [
+        "CartLinesProps.children",
+        "A `ReactNode` element "
+      ],
+      [
+        "CartLinesProps.children",
+        ""
+      ],
+      [
+        "CartLinesProps.children",
+        ""
+      ],
+      [
+        "CartLinesProps.children",
+        ""
+      ]
+    ],
+    "title": "CartLinesProps"
+  },
+  {
+    "content": [
+      [
+        "The `CartProvider` component creates a context for using a cart. It creates a cart object and callbacks that can be accessed by any descendent component using the `useCart` hook and related hooks. It also carries out any callback props when a relevant action is performed. For example, if a `onLineAdd` callback is provided, then the callback will be called when a new line item is successfully added to the cart.  The `CartProvider` component must be a descendent of the `ShopifyProvider` component. You must use this component if you want to use the `useCart` hook or related hooks, or if you would like to use the `AddToCartButton` component. "
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ]
+    ],
+    "title": "CartProvider()"
+  },
+  {
+    "content": [
+      [
+        "CartProviderProps.onNoteUpdate",
+        "A callback that is invoked when the process to add or update a note in the cart begins, but before the note is added or updated in the Storefront API. "
+      ],
+      [
+        "CartProviderProps.onNoteUpdate",
+        ""
+      ],
+      [
+        "CartProviderProps.onNoteUpdate",
+        ""
+      ],
+      [
+        "CartProviderProps.onNoteUpdate",
+        ""
+      ]
+    ],
+    "title": "CartProviderProps"
+  },
+  {
+    "content": [],
+    "title": "CartQuery"
+  },
+  {
+    "content": [
+      [
+        "The `CartShopPayButton` component renders a `ShopPayButton` for the items in the cart. It must be a descendent of a `CartProvider` component. "
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ]
+    ],
+    "title": "CartShopPayButton()"
+  },
+  {
+    "content": [
+      [
+        "CartWithActions.totalQuantity",
+        "The total number of items in the cart, across all lines. If there are no lines, then the value is 0. "
+      ],
+      [
+        "CartWithActions.totalQuantity",
+        ""
+      ],
+      [
+        "CartWithActions.totalQuantity",
+        ""
+      ],
+      [
+        "CartWithActions.totalQuantity",
+        ""
+      ]
+    ],
+    "title": "CartWithActions"
+  },
+  {
+    "content": [],
+    "title": "decodeShopifyId()"
+  },
+  {
+    "content": [
+      [
+        "The `ExternalVideo` component renders an embedded video for the Storefront API's [ExternalVideo object](/api/storefront/reference/products/externalvideo). "
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ]
+    ],
+    "title": "ExternalVideo()"
+  },
+  {
+    "content": [
+      [
+        "ExternalVideoProps.options",
+        "An object containing the options available for either [YouTube](https://developers.google.com/youtube/player_parameters#Parameters) or [Vimeo](https://vimeo.zendesk.com/hc/en-us/articles/360001494447-Using-Player-Parameters). "
+      ],
+      [
+        "ExternalVideoProps.options",
+        ""
+      ],
+      [
+        "ExternalVideoProps.options",
+        ""
+      ],
+      [
+        "ExternalVideoProps.options",
+        ""
+      ]
+    ],
+    "title": "ExternalVideoProps"
+  },
+  {
+    "content": [],
+    "title": "fetchBuilder()"
+  },
+  {
+    "content": [
+      [
+        "The `FileRoutes` component builds a set of default Hydrogen routes based on the output provided by Vite's [import.meta.globEager](https://vitejs.dev/guide/features.html#glob-import) method. You can have multiple instances of this component to source file routes from multiple locations. "
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ]
+    ],
+    "title": "FileRoutes()"
+  },
+  {
+    "content": [
+      [
+        "The `flattenConnection` utility transforms a connection object from the Storefront API (for example, [Product-related connections](/api/storefront/reference/products/product)) into a flat array of nodes. "
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ]
+    ],
+    "title": "flattenConnection()"
+  },
+  {
+    "content": [],
+    "title": "generateCacheControlHeader()"
+  },
+  {
+    "content": [
+      [
+        "Not all environments have access to Performance.now(). This is to prevent timing side channel attacks.  See: https://community.cloudflare.com/t/cloudflare-workers-how-do-i-measure-execution-time-of-my-method/69672 "
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ]
+    ],
+    "title": "getTime()"
+  },
+  {
+    "content": [],
+    "title": "graphqlRequestBody()"
+  },
+  {
+    "content": [
+      [
+        "HydrogenUseQueryOptions.preload",
+        "Whether to [preload the query](/custom-storefronts/hydrogen/framework/preloaded-queries). Defaults to `false`. Specify `true` to preload the query for the URL or `'*'` to preload the query for all requests. "
+      ],
+      [
+        "HydrogenUseQueryOptions.preload",
+        ""
+      ],
+      [
+        "HydrogenUseQueryOptions.preload",
+        ""
+      ],
+      [
+        "HydrogenUseQueryOptions.preload",
+        ""
+      ]
+    ],
+    "title": "HydrogenUseQueryOptions"
+  },
+  {
+    "content": [
+      [
+        "The `Image` component renders an image for the Storefront API's [Image object](/api/storefront/reference/common-objects/image). "
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ]
+    ],
+    "title": "Image_2()"
+  },
+  {
+    "content": [],
+    "title": "ImageProps"
+  },
+  {
+    "content": [
+      [
+        "The `isClient` utility is a function that returns a boolean indicating if the code was run on the client. "
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ]
+    ],
+    "title": "isClient()"
+  },
+  {
+    "content": [
+      [
+        "The `Link` component is used to navigate between routes. Because it renders an underlying `<a>` element, all properties available to the `<a>` element are also available to the `Link` component. For more information, refer to the [`<a>` element documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attributes). "
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ]
+    ],
+    "title": "Link"
+  },
+  {
+    "content": [
+      [
+        "LinkProps.to",
+        "The destination URL that the link points to. This is the `href` attribute of the underlying `<a>` element. "
+      ],
+      [
+        "LinkProps.to",
+        ""
+      ],
+      [
+        "LinkProps.to",
+        ""
+      ],
+      [
+        "LinkProps.to",
+        ""
+      ]
+    ],
+    "title": "LinkProps"
+  },
+  {
+    "content": [
+      [
+        "The `LocalizationProvider` component automatically queries the Storefront API's [`localization`](/api/storefront/reference/common-objects/queryroot) field for the `isoCode` and `name` of the `country` and keeps this information in a context.  Any descendents of this provider can use the `useCountry` hook. The `isoCode` of the `country` can be used in the Storefront API's `@inContext` directive as the `country` value. "
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ]
+    ],
+    "title": "LocalizationProvider()"
+  },
+  {
+    "content": [],
+    "title": "log"
+  },
+  {
+    "content": [],
+    "title": "Logger"
+  },
+  {
+    "content": [
+      [
+        "The `MediaFile` component renders the media for the Storefront API's [Media object](/api/storefront/reference/products/media). It renders an `Image`, a `Video`, an `ExternalVideo`, or a `ModelViewer` depending on the `mediaContentType` of the `media` provided as a prop. "
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ]
+    ],
+    "title": "MediaFile()"
+  },
+  {
+    "content": [
+      [
+        "MediaFileProps.options",
+        "The options for the `Image`, `Video`, or `ExternalVideo` components. "
+      ],
+      [
+        "MediaFileProps.options",
+        ""
+      ],
+      [
+        "MediaFileProps.options",
+        ""
+      ],
+      [
+        "MediaFileProps.options",
+        ""
+      ]
+    ],
+    "title": "MediaFileProps"
+  },
+  {
+    "content": [
+      [
+        "The `Metafield` component renders the value of a Storefront API's [Metafield object](/api/storefront/reference/common-objects/metafield).  Renders a smart default of the Metafield's `value`. For more information, refer to the [Default output](#default-output) section. "
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ]
+    ],
+    "title": "Metafield()"
+  },
+  {
+    "content": [
+      [
+        "MetafieldProps.data",
+        "An object with fields that correspond to the Storefront API's [Metafield object](/api/storefront/reference/common-objects/metafield). "
+      ],
+      [
+        "MetafieldProps.data",
+        ""
+      ],
+      [
+        "MetafieldProps.data",
+        ""
+      ],
+      [
+        "MetafieldProps.data",
+        ""
+      ]
+    ],
+    "title": "MetafieldProps"
+  },
+  {
+    "content": [],
+    "title": "MetafieldType"
+  },
+  {
+    "content": [
+      [
+        "The `ModelViewer` component renders a 3D model (with the `model-viewer` tag) for the Storefront API's [Model3d object](/api/storefront/reference/products/model3d). "
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ]
+    ],
+    "title": "ModelViewer()"
+  },
+  {
+    "content": [
+      [
+        "ModelViewerProps.variantName",
+        "A string to select a model variant by name. Refer to [variant-name in the XXX HtmlStartTag XXX\n documentation](https://modelviewer.dev/docs/index.html#entrydocs-scenegraph-attributes-variantName). "
+      ],
+      [
+        "ModelViewerProps.variantName",
+        ""
+      ],
+      [
+        "ModelViewerProps.variantName",
+        ""
+      ],
+      [
+        "ModelViewerProps.variantName",
+        ""
+      ]
+    ],
+    "title": "ModelViewerProps"
+  },
+  {
+    "content": [
+      [
+        "The `Money` component renders a string of the Storefront API's [MoneyV2 object](/api/storefront/reference/common-objects/moneyv2) according to the `defaultLocale` in the `shopify.config.js` file. "
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ]
+    ],
+    "title": "Money()"
+  },
+  {
+    "content": [
+      [
+        "MoneyProps.data",
+        "An object with fields that correspond to the Storefront API's [MoneyV2 object](/api/storefront/reference/common-objects/moneyv2). "
+      ],
+      [
+        "MoneyProps.data",
+        ""
+      ],
+      [
+        "MoneyProps.data",
+        ""
+      ],
+      [
+        "MoneyProps.data",
+        ""
+      ]
+    ],
+    "title": "MoneyProps"
+  },
+  {
+    "content": [],
+    "title": "NoStore()"
+  },
+  {
+    "content": [],
+    "title": "OptionsInStockCallback"
+  },
+  {
+    "content": [],
+    "title": "OptionWithValues"
+  },
+  {
+    "content": [
+      [
+        "The `ProductDescription` component renders a `div` with the product's [`descriptionHtml`](/api/storefront/reference/products/product). It must be a descendent of the `ProductProvider` component. "
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ]
+    ],
+    "title": "ProductDescription()"
+  },
+  {
+    "content": [
+      [
+        "The `ProductMetafield` component renders a [`Metafield`](/api/hydrogen/components/primitive/metafield) component with the product metafield. It must be a descendent of a `ProductProvider` component. "
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ]
+    ],
+    "title": "ProductMetafield()"
+  },
+  {
+    "content": [
+      [
+        "ProductMetafieldProps.variantId",
+        "The ID of the variant. If provided, then use the metafield corresponding to the variant ID instead of the product's metafield. "
+      ],
+      [
+        "ProductMetafieldProps.variantId",
+        ""
+      ],
+      [
+        "ProductMetafieldProps.variantId",
+        ""
+      ],
+      [
+        "ProductMetafieldProps.variantId",
+        ""
+      ]
+    ],
+    "title": "ProductMetafieldProps"
+  },
+  {
+    "content": [],
+    "title": "ProductOptionsHookValue"
+  },
+  {
+    "content": [
+      [
+        "The `ProductPrice` component renders a `Money` component with the product [`priceRange`](/api/storefront/reference/products/productpricerange)'s `maxVariantPrice` or `minVariantPrice`, for either the regular price or compare at price range. It must be a descendent of the `ProductProvider` component. "
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ]
+    ],
+    "title": "ProductPrice()"
+  },
+  {
+    "content": [
+      [
+        "ProductPriceProps.variantId",
+        "The ID of the variant. "
+      ],
+      [
+        "ProductPriceProps.variantId",
+        ""
+      ],
+      [
+        "ProductPriceProps.variantId",
+        ""
+      ],
+      [
+        "ProductPriceProps.variantId",
+        ""
+      ]
+    ],
+    "title": "ProductPriceProps"
+  },
+  {
+    "content": [
+      [
+        "The `ProductProvider` component sets up a context with product details. Descendents of this component can use the `useProduct` hook. "
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ]
+    ],
+    "title": "ProductProvider()"
+  },
+  {
+    "content": [
+      [
+        "ProductProviderProps.initialVariantId",
+        "The initially selected variant. If this is missing, then `selectedVariantId` in the returned `object` from the `useProduct` hook uses the first available variant or the first variant (if none are available). "
+      ],
+      [
+        "ProductProviderProps.initialVariantId",
+        ""
+      ],
+      [
+        "ProductProviderProps.initialVariantId",
+        ""
+      ],
+      [
+        "ProductProviderProps.initialVariantId",
+        ""
+      ]
+    ],
+    "title": "ProductProviderProps"
+  },
+  {
+    "content": [
+      [
+        "The `ProductTitle` component renders a `span` element (or the type of HTML element specified by the `as` prop) with the product's [`title`](/api/storefront/reference/products/product). It must be a descendent of the `ProductProvider` component. "
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ]
+    ],
+    "title": "ProductTitle()"
+  },
+  {
+    "content": [
+      [
+        "The `Route` component is used to set up a route in Hydrogen that's independent of the file system. Routes are matched in the order that they're defined. "
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ]
+    ],
+    "title": "Route()"
+  },
+  {
+    "content": [
+      [
+        "The `Router` component provides the context for routing in your Hydrogen app. "
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ]
+    ],
+    "title": "Router()"
+  },
+  {
+    "content": [],
+    "title": "SelectedOptions"
+  },
+  {
+    "content": [],
+    "title": "SelectedSellingPlanCallback"
+  },
+  {
+    "content": [],
+    "title": "SelectOptionCallback"
+  },
+  {
+    "content": [],
+    "title": "SelectOptionsCallback"
+  },
+  {
+    "content": [],
+    "title": "SelectVariantCallback"
+  },
+  {
+    "content": [
+      [
+        "The `Seo` component renders SEO information on a webpage. "
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ]
+    ],
+    "title": "Seo()"
+  },
+  {
+    "content": [],
+    "title": "SeoProps"
+  },
+  {
+    "content": [],
+    "title": "ServerState"
+  },
+  {
+    "content": [],
+    "title": "ServerStateContext"
+  },
+  {
+    "content": [],
+    "title": "ServerStateContextValue"
+  },
+  {
+    "content": [],
+    "title": "ServerStateProvider()"
+  },
+  {
+    "content": [],
+    "title": "setLogger()"
+  },
+  {
+    "content": [],
+    "title": "setLoggerOptions()"
+  },
+  {
+    "content": [
+      [
+        "The `ShopifyProvider` component wraps your entire app and provides support for hooks. You should place it in your app's entry point component. For example, `<App>`. If you're using the Hydrogen framework, you don't need to add this provider because it's automatically wrapped around your app in `renderHydrogen()`. "
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ]
+    ],
+    "title": "ShopifyProvider()"
+  },
+  {
+    "content": [
+      [
+        "The `ShopPayButton` component renders a button that redirects to the Shop Pay checkout. "
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ]
+    ],
+    "title": "ShopPayButton()"
+  },
+  {
+    "content": [],
+    "title": "ShopPayButtonProps"
+  },
+  {
+    "content": [],
+    "title": "State"
+  },
+  {
+    "content": [],
+    "title": "Status"
+  },
+  {
+    "content": [
+      [
+        "The `useCart` hook provides access to the cart object. It must be a descendent of a `CartProvider` component. "
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ]
+    ],
+    "title": "useCart()"
+  },
+  {
+    "content": [],
+    "title": "useCartFetch()"
+  },
+  {
+    "content": [
+      [
+        "The `useCartLine` hook provides access to the cart line object. It must be a descendent of a `CartProvider` component. "
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ]
+    ],
+    "title": "useCartLine()"
+  },
+  {
+    "content": [
+      [
+        "The `useCountry` hook returns a tuple of the current localization country and a function for updating it. It must be a descendent of a `LocalizationProvider` component. "
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ]
+    ],
+    "title": "useCountry()"
+  },
+  {
+    "content": [],
+    "title": "useInstantCheckout()"
+  },
+  {
+    "content": [
+      [
+        "The `useLoadScript` hook loads an external script tag on the client-side. "
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ]
+    ],
+    "title": "useLoadScript()"
+  },
+  {
+    "content": [],
+    "title": "useMeasurement()"
+  },
+  {
+    "content": [
+      [
+        "The `useMoney` hook takes a [MoneyV2 object](/api/storefront/reference/common-objects/moneyv2) and returns a default-formatted string of the amount with the correct currency indicator, along with some of the parts provided by [Intl.NumberFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat). "
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ]
+    ],
+    "title": "useMoney()"
+  },
+  {
+    "content": [
+      [
+        "The `useParsedMetafields` hook transforms a [MetafieldConnection](/api/storefront/reference/common-objects/metafieldconnection) in an array of metafields whose `values` have been parsed according to the metafield `type`. "
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ]
+    ],
+    "title": "useParsedMetafields()"
+  },
+  {
+    "content": [
+      [
+        "The `useProduct` hook returns the product object of the nearest `ProductProvider`. It must be a descendent of a `ProductProvider` component. "
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ]
+    ],
+    "title": "useProduct()"
+  },
+  {
+    "content": [
+      [
+        "The `useProductOptions` hook returns an object that enables you to keep track of the selected variant and/or selling plan state, as well as callbacks for modifying the state. "
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ]
+    ],
+    "title": "useProductOptions()"
+  },
+  {
+    "content": [
+      [
+        "The `useQuery` hook executes an asynchronous operation like `fetch` in a way that supports [Suspense](https://reactjs.org/docs/concurrent-mode-suspense.html). It's based on [react-query](https://react-query.tanstack.com/reference/useQuery). You can use this hook to call any third-party APIs from a server component. "
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ]
+    ],
+    "title": "useQuery()"
+  },
+  {
+    "content": [
+      [
+        "The `useRouteParams` hook retrieves the parameters of an active route. The hook is available in both server and client components. "
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ]
+    ],
+    "title": "useRouteParams()"
+  },
+  {
+    "content": [
+      [
+        "The `useShop` hook provides access to values within `shopify.config.js`. It must be a descendent of a `ShopifyProvider` component. "
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ]
+    ],
+    "title": "useShop()"
+  },
+  {
+    "content": [
+      [
+        "The `useShopQuery` hook allows you to make server-only GraphQL queries to the Storefront API. It must be a descendent of a `ShopifyProvider` component. "
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ]
+    ],
+    "title": "useShopQuery()"
+  },
+  {
+    "content": [],
+    "title": "UseShopQueryResponse"
+  },
+  {
+    "content": [
+      [
+        "The `useUrl` hook retrieves the current URL in a server or client component. "
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ]
+    ],
+    "title": "useUrl()"
+  },
+  {
+    "content": [
+      [
+        "The `Video` component renders a `video` for the Storefront API's [Video object](/api/storefront/reference/products/video). "
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ],
+      [
+        ""
+      ]
+    ],
+    "title": "Video()"
+  },
+  {
+    "content": [],
+    "title": "VideoProps"
+  },
+  {
+    "content": [],
+    "title": "VideoProps"
+  }
+]

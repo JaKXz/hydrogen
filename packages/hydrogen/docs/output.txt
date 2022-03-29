@@ -1,0 +1,1049 @@
+Analysis will use the bundled TypeScript version 4.5.5
+*** The target project appears to use TypeScript 4.6.2 which is newer than the bundled compiler engine; consider upgrading API Extractor.
+
+	AddToCartButton()
+	The `AddToCartButton` component renders a button that adds an item to the cart when pressed. It must be a descendent of the `CartProvider` component.  
+	
+	
+	
+	AddToCartButtonProps
+		AddToCartButtonProps.accessibleAddingToCartLabel
+		The text that is announced by the screen reader when the item is being added to the cart. Used for accessibility purposes only and not displayed on the page. 
+		
+		
+		
+		AddToCartButtonProps.attributes
+		An array of cart line attributes that belong to the item being added to the cart. 
+		
+		
+		
+		AddToCartButtonProps.children
+		Any ReactNode elements. 
+		
+		
+		
+		AddToCartButtonProps.quantity
+		The item quantity. 
+		
+		
+		
+		AddToCartButtonProps.variantId
+		The ID of the variant. 
+		
+		
+		
+	BuyNowButton()
+	The `BuyNowButton` component renders a button that adds an item to the cart and redirects the customer to checkout. 
+	
+	
+	
+	BuyNowButtonProps
+		BuyNowButtonProps.attributes
+		An array of cart line attributes that belong to the item being added to the cart. 
+		
+		
+		
+		BuyNowButtonProps.children
+		Any `ReactNode` elements. 
+		
+		
+		
+		BuyNowButtonProps.quantity
+		The item quantity. Defaults to 1. 
+		
+		
+		
+		BuyNowButtonProps.variantId
+		The ID of the variant. 
+		
+		
+		
+	CacheCustom()
+	CacheDays()
+	CacheHours()
+	CacheMinutes()
+	CacheMonths()
+	CacheSeconds()
+	CacheWeeks()
+	Cart
+		Cart.attributes
+		The cart's attributes. 
+		
+		
+		
+		Cart.buyerIdentity
+		The cart's buyer identity. 
+		
+		
+		
+		Cart.checkoutUrl
+		The checkout URL for the cart, if the cart has been created in the Storefront API. 
+		
+		
+		
+		Cart.discountCodes
+		The discount codes applied to the cart. 
+		
+		
+		
+		Cart.estimatedCost
+		The estimate cost for the cart, including the subtotal, total, taxes, and duties. 
+		
+		
+		
+		Cart.id
+		The cart's ID if it has been created through the Storefront API. 
+		
+		
+		
+		Cart.lines
+		The cart lines. 
+		
+		
+		
+		Cart.note
+		The cart's note. 
+		
+		
+		
+	CartAction
+	CartCheckoutButton()
+	The `CartCheckoutButton` component renders a button that redirects to the checkout URL for the cart. It must be a descendent of a `CartProvider` component. 
+	
+	
+	
+	CartEstimatedCost()
+	The `CartEstimatedCost` component renders a `Money` component with the cost associated with the `amountType` prop. If no `amountType` prop is specified, then it defaults to `totalAmount`. If `children` is a function, then it will pass down the render props provided by the parent component. 
+	
+	
+	
+	CartEstimatedCostProps
+		CartEstimatedCostProps.amountType
+		A string type that defines the type of cost needed. Valid values: `total`, `subtotal`, `tax`, or `duty`. 
+		
+		
+		
+		CartEstimatedCostProps.children
+		A function that takes an object return by the `useMoney` hook and returns a `ReactNode`. 
+		
+		
+		
+	CartLineImage()
+	The `CartLineImage` component renders an `Image` component for the cart line merchandise's image. It must be a descendent of a `CartLineProvider` component. 
+	
+	
+	
+	CartLinePrice()
+	The `CartLinePrice` component renders a `Money` component for the cart line merchandise's price or compare at price. It must be a descendent of a `CartLineProvider` component. 
+	
+	
+	
+	CartLinePriceProps
+		CartLinePriceProps.priceType
+		The type of price. Valid values:`regular` (default) or `compareAt`. 
+		
+		
+		
+	CartLineProductTitle()
+	The `CartLineProductTitle` component renders a `span` element (or the type of HTML element specified by the `as` prop) with the cart line merchandise's title. It must be a descendent of a `CartLineProvider` component. 
+	
+	
+	
+	CartLineProvider()
+	The `CartLineProvider` component creates a context for using a cart line. 
+	
+	
+	
+	CartLineProviderProps
+		CartLineProviderProps.children
+		Any `ReactNode` elements. 
+		
+		
+		
+		CartLineProviderProps.line
+		A cart line object. 
+		
+		
+		
+	CartLineQuantity()
+	The `CartLineQuantity` component renders a `span` element (or the type of HTML element specified by the `as` prop) with the cart line's quantity. It must be a descendent of a `CartLineProvider` component. 
+	
+	
+	
+	CartLineQuantityAdjustButton()
+	The `CartLineQuantityAdjustButton` component renders a button that adjusts the cart line's quantity when pressed. It must be a descendent of a `CartLineProvider` component. 
+	
+	
+	
+	CartLines()
+	The `CartLines` component iterates over each cart line and renders its `children` within a `CartLineProvider` for each cart line. 
+	
+	
+	
+	CartLinesProps
+		CartLinesProps.as
+		A `ReactNode` element. Valid values: `ul` or `undefined`. If `ul`, then each child will be wrapped with a `li` element. 
+		
+		
+		
+		CartLinesProps.children
+		A `ReactNode` element 
+		
+		
+		
+	CartProvider()
+	The `CartProvider` component creates a context for using a cart. It creates a cart object and callbacks that can be accessed by any descendent component using the `useCart` hook and related hooks. It also carries out any callback props when a relevant action is performed. For example, if a `onLineAdd` callback is provided, then the callback will be called when a new line item is successfully added to the cart.  The `CartProvider` component must be a descendent of the `ShopifyProvider` component. You must use this component if you want to use the `useCart` hook or related hooks, or if you would like to use the `AddToCartButton` component. 
+	
+	
+	
+	CartProviderProps
+		CartProviderProps.children
+		Any `ReactNode` elements. 
+		
+		
+		
+		CartProviderProps.data
+		An object with fields that correspond to the Storefront API's [Cart object](/api/storefront/latest/objects/cart). 
+		
+		
+		
+		CartProviderProps.numCartLines
+		CartProviderProps.onAttributesUpdate
+		A callback that is invoked when the process to update the cart attributes begins, but before the attributes are updated in the Storefront API. 
+		
+		
+		
+		CartProviderProps.onBuyerIdentityUpdate
+		A callback that is invoked when the process to update the buyer identity begins, but before the buyer identity is updated in the Storefront API. 
+		
+		
+		
+		CartProviderProps.onCreate
+		A callback that is invoked when the process to create a cart begins, but before the cart is created in the Storefront API. 
+		
+		
+		
+		CartProviderProps.onDiscountCodesUpdate
+		A callback that is invoked when the process to update the cart discount codes begins, but before the discount codes are updated in the Storefront API. 
+		
+		
+		
+		CartProviderProps.onLineAdd
+		A callback that is invoked when the process to add a line item to the cart begins, but before the line item is added to the Storefront API. 
+		
+		
+		
+		CartProviderProps.onLineRemove
+		A callback that is invoked when the process to remove a line item to the cart begins, but before the line item is removed from the Storefront API. 
+		
+		
+		
+		CartProviderProps.onLineUpdate
+		A callback that is invoked when the process to update a line item in the cart begins, but before the line item is updated in the Storefront API. 
+		
+		
+		
+		CartProviderProps.onNoteUpdate
+		A callback that is invoked when the process to add or update a note in the cart begins, but before the note is added or updated in the Storefront API. 
+		
+		
+		
+	CartQuery
+	CartShopPayButton()
+	The `CartShopPayButton` component renders a `ShopPayButton` for the items in the cart. It must be a descendent of a `CartProvider` component. 
+	
+	
+	
+	CartWithActions
+		CartWithActions.buyerIdentityUpdate
+		A callback that updates the buyer identity in the cart. Expects the same `buyerIdentity` input that you would provide to the Storefront API's `cartBuyerIdentityUpdate` mutation. 
+		
+		
+		
+		CartWithActions.cartAttributesUpdate
+		A callback that updates the cart attributes. Expects the same `attributes` input that you would provide to the Storefront API's `cartAttributesUpdate` mutation. 
+		
+		
+		
+		CartWithActions.cartCreate
+		A callback that creates a cart. Expects the same input you would provide to the Storefront API's `cartCreate` mutation. 
+		
+		
+		
+		CartWithActions.discountCodesUpdate
+		A callback that updates the cart's discount codes. Expects the same `codes` input that you would provide to the Storefront API's `cartDiscountCodesUpdate` mutation. 
+		
+		
+		
+		CartWithActions.error
+		If an error occurred on the previous cart action, then `error` will exist and `cart` will be put back into the last valid status it was in. 
+		
+		
+		
+		CartWithActions.linesAdd
+		A callback that adds lines to the cart. Expects the same `lines` input that you would provide to the Storefront API's `cartLinesAdd` mutation. If a cart doesn't already exist, then it will create the cart for you. 
+		
+		
+		
+		CartWithActions.linesRemove
+		A callback that removes lines from the cart. Expects the same `lines` input that you would provide to the Storefront API's `cartLinesRemove` mutation. Only lines that are included in the `lines` parameter will be in the cart afterwards. 
+		
+		
+		
+		CartWithActions.linesUpdate
+		A callback that updates lines in the cart. Expects the same `lines` input that you would provide to the Storefront API's `cartLinesUpdate` mutation. If a line item is not included in the `lines` parameter, it will still exist in the cart and will not be changed. 
+		
+		
+		
+		CartWithActions.noteUpdate
+		A callback that updates the note in the cart. Expects the same `note` input that you would provide to the Storefront API's `cartNoteUpdate` mutation. 
+		
+		
+		
+		CartWithActions.status
+		The status of the cart. This returns 'uninitialized' when the cart is not yet created, `creating` when the cart is being created, `fetching` when an existing cart is being fetched, `updating` when the cart is updating, and `idle` when the cart isn't being created or updated. 
+		
+		
+		
+		CartWithActions.totalQuantity
+		The total number of items in the cart, across all lines. If there are no lines, then the value is 0. 
+		
+		
+		
+	decodeShopifyId()
+	ExternalVideo()
+	The `ExternalVideo` component renders an embedded video for the Storefront API's [ExternalVideo object](/api/storefront/reference/products/externalvideo). 
+	
+	
+	
+	ExternalVideoProps
+		ExternalVideoProps.data
+		An object with fields that correspond to the Storefront API's [ExternalVideo object](/api/storefront/reference/products/externalvideo). 
+		
+		
+		
+		ExternalVideoProps.options
+		An object containing the options available for either [YouTube](https://developers.google.com/youtube/player_parameters#Parameters) or [Vimeo](https://vimeo.zendesk.com/hc/en-us/articles/360001494447-Using-Player-Parameters). 
+		
+		
+		
+	fetchBuilder()
+	FileRoutes()
+	The `FileRoutes` component builds a set of default Hydrogen routes based on the output provided by Vite's [import.meta.globEager](https://vitejs.dev/guide/features.html#glob-import) method. You can have multiple instances of this component to source file routes from multiple locations. 
+	
+	
+	
+	flattenConnection()
+	The `flattenConnection` utility transforms a connection object from the Storefront API (for example, [Product-related connections](/api/storefront/reference/products/product)) into a flat array of nodes. 
+	
+	
+	
+	generateCacheControlHeader()
+	getTime()
+	Not all environments have access to Performance.now(). This is to prevent timing side channel attacks.  See: https://community.cloudflare.com/t/cloudflare-workers-how-do-i-measure-execution-time-of-my-method/69672 
+	
+	
+	
+	graphqlRequestBody()
+	HydrogenUseQueryOptions
+		HydrogenUseQueryOptions.cache
+		The [caching strategy](/custom-storefronts/hydrogen/framework/cache#caching-strategies) to help you determine which cache control header to set. 
+		
+		
+		
+		HydrogenUseQueryOptions.preload
+		Whether to [preload the query](/custom-storefronts/hydrogen/framework/preloaded-queries). Defaults to `false`. Specify `true` to preload the query for the URL or `'*'` to preload the query for all requests. 
+		
+		
+		
+	Image_2()
+	The `Image` component renders an image for the Storefront API's [Image object](/api/storefront/reference/common-objects/image). 
+	
+	
+	
+	ImageProps
+	isClient()
+	The `isClient` utility is a function that returns a boolean indicating if the code was run on the client. 
+	
+	
+	
+	Link
+	The `Link` component is used to navigate between routes. Because it renders an underlying `<a>` element, all properties available to the `<a>` element are also available to the `Link` component. For more information, refer to the [`<a>` element documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attributes). 
+	
+	
+	
+	LinkProps
+		LinkProps.clientState
+		The custom client state with the navigation. 
+		
+		
+		
+		LinkProps.reloadDocument
+		Whether to reload the whole document on navigation. 
+		
+		
+		
+		LinkProps.replace
+		Whether to update the state object or URL of the current history entry. Refer to the [history.replaceState documentation](https://developer.mozilla.org/en-US/docs/Web/API/History/replaceState). 
+		
+		
+		
+		LinkProps.to
+		The destination URL that the link points to. This is the `href` attribute of the underlying `<a>` element. 
+		
+		
+		
+	LocalizationProvider()
+	The `LocalizationProvider` component automatically queries the Storefront API's [`localization`](/api/storefront/reference/common-objects/queryroot) field for the `isoCode` and `name` of the `country` and keeps this information in a context.  Any descendents of this provider can use the `useCountry` hook. The `isoCode` of the `country` can be used in the Storefront API's `@inContext` directive as the `country` value. 
+	
+	
+	
+	log
+	Logger
+		Logger.debug
+		Logger.error
+		Logger.fatal
+		Logger.options
+		Logger.trace
+		Logger.warn
+	MediaFile()
+	The `MediaFile` component renders the media for the Storefront API's [Media object](/api/storefront/reference/products/media). It renders an `Image`, a `Video`, an `ExternalVideo`, or a `ModelViewer` depending on the `mediaContentType` of the `media` provided as a prop. 
+	
+	
+	
+	MediaFileProps
+		MediaFileProps.data
+		An object with fields that correspond to the Storefront API's [Media object](/api/storefront/reference/products/media). 
+		
+		
+		
+		MediaFileProps.options
+		The options for the `Image`, `Video`, or `ExternalVideo` components. 
+		
+		
+		
+	Metafield()
+	The `Metafield` component renders the value of a Storefront API's [Metafield object](/api/storefront/reference/common-objects/metafield).  Renders a smart default of the Metafield's `value`. For more information, refer to the [Default output](#default-output) section. 
+	
+	
+	
+	MetafieldProps
+		MetafieldProps.as
+		An HTML tag to be rendered as the base element wrapper. The default value varies depending on [metafield.type](/apps/metafields/types). 
+		
+		
+		
+		MetafieldProps.data
+		An object with fields that correspond to the Storefront API's [Metafield object](/api/storefront/reference/common-objects/metafield). 
+		
+		
+		
+	MetafieldType
+	ModelViewer()
+	The `ModelViewer` component renders a 3D model (with the `model-viewer` tag) for the Storefront API's [Model3d object](/api/storefront/reference/products/model3d). 
+	
+	
+	
+	ModelViewerProps
+		ModelViewerProps.animationCrossfadeDuration
+		A string of the animation crossfade duration between the previous and next animations. Refer to [animation-cross-fade-duration in the XXX HtmlStartTag XXX
+ documentation](https://modelviewer.dev/docs/index.html#entrydocs-animation-attributes-animationCrossfadeDuration). 
+		
+		
+		
+		ModelViewerProps.animationName
+		A string of the animation to play by name. Refer to [animation-name in the XXX HtmlStartTag XXX
+ documentation](https://modelviewer.dev/docs/index.html#entrydocs-animation-attributes-animationName). 
+		
+		
+		
+		ModelViewerProps.ar
+		A boolean to enable an AR experience. Refer to [ar in the XXX HtmlStartTag XXX
+ documentation](https://modelviewer.dev/docs/index.html#entrydocs-augmentedreality-attributes-ar). 
+		
+		
+		
+		ModelViewerProps.arModes
+		A prioritized list of `webxr`, `scene-viewer`, and/or `quick-look` to indicate the types of AR experiences to enable. Refer to [ar-modes in the XXX HtmlStartTag XXX
+ documentation](https://modelviewer.dev/docs/index.html#entrydocs-augmentedreality-attributes-arModes). 
+		
+		
+		
+		ModelViewerProps.arPlacement
+		A styring of either `floor` or `wall` to indicate where to place the object in AR. Refer to [ar-placement in the XXX HtmlStartTag XXX
+ documentation](https://modelviewer.dev/docs/index.html#entrydocs-augmentedreality-attributes-arPlacement). 
+		
+		
+		
+		ModelViewerProps.arScale
+		A string of `auto` or `fixed` to control the scaling behaviour. Refer to [ar-scale in the XXX HtmlStartTag XXX
+ documentation](https://modelviewer.dev/docs/index.html#entrydocs-augmentedreality-attributes-arScale). 
+		
+		
+		
+		ModelViewerProps.autoplay
+		A boolean to enable the model animations. Refer to [autoplay in the XXX HtmlStartTag XXX
+ documentation](https://modelviewer.dev/docs/index.html#entrydocs-animation-attributes-autoplay). 
+		
+		
+		
+		ModelViewerProps.autoRotate
+		A boolean to enable auto rotate. Refer to [auto-rotate in the XXX HtmlStartTag XXX
+ documentation](https://modelviewer.dev/docs/index.html#entrydocs-stagingandcameras-attributes-autoRotate). 
+		
+		
+		
+		ModelViewerProps.autoRotateDelay
+		A number in milliseconds to specify the delay before auto rotation begins. Refer to [auto-rotate-delay in the XXX HtmlStartTag XXX
+ documentation](https://modelviewer.dev/docs/index.html#entrydocs-stagingandcameras-attributes-autoRotateDelay). 
+		
+		
+		
+		ModelViewerProps.bounds
+		A string of `tight` or `legacy` for calculating the model's bounding box. Refer to [bounds in the XXX HtmlStartTag XXX
+ documentation](https://modelviewer.dev/docs/index.html#entrydocs-stagingandcameras-attributes-bounds). 
+		
+		
+		
+		ModelViewerProps.cameraControls
+		A boolean to enable camera controls. Refer to [attributes in the XXX HtmlStartTag XXX
+ documentation](https://modelviewer.dev/docs/index.html#stagingandcameras-attributes). 
+		
+		
+		
+		ModelViewerProps.cameraOrbit
+		A string of the starting orbital position of the camera. Refer to [camera-orbit in the XXX HtmlStartTag XXX
+ documentation](https://modelviewer.dev/docs/index.html#entrydocs-stagingandcameras-attributes-cameraOrbit). 
+		
+		
+		
+		ModelViewerProps.cameraTarget
+		A string of the point the camera orbits around. Refer to [camera-target in the XXX HtmlStartTag XXX
+ documentation](https://modelviewer.dev/docs/index.html#entrydocs-stagingandcameras-attributes-cameraTarget). 
+		
+		
+		
+		ModelViewerProps.children
+		Any ReactNode elements. 
+		
+		
+		
+		ModelViewerProps.data
+		An object with fields that correspond to the Storefront API's [Model3D object](/api/storefront/latest/objects/model3d). 
+		
+		
+		
+		ModelViewerProps.disableZoom
+		A boolean to disable zoom. Refer to [disable-zoom in the XXX HtmlStartTag XXX
+ documentation](https://modelviewer.dev/docs/index.html#entrydocs-stagingandcameras-attributes-disable-zoom). 
+		
+		
+		
+		ModelViewerProps.environmentImage
+		A string to control the environmental reflection of the model. Refer to [environment-image in the XXX HtmlStartTag XXX
+ documentation](https://modelviewer.dev/docs/index.html#entrydocs-lightingandenv-attributes-environmentImage). 
+		
+		
+		
+		ModelViewerProps.exposure
+		A number indicating the exposure of the model and the skybox. Refer to [exposure in the XXX HtmlStartTag XXX
+ documentation](https://modelviewer.dev/docs/index.html#entrydocs-lightingandenv-attributes-exposure). 
+		
+		
+		
+		ModelViewerProps.fieldOfView
+		A string of the vertical field of view of the camera. Refer to [field-of-view in the XXX HtmlStartTag XXX
+ documentation](https://modelviewer.dev/docs/index.html#entrydocs-stagingandcameras-attributes-fieldOfView). 
+		
+		
+		
+		ModelViewerProps.interactionPolicy
+		A string of either `allow-when-focused` or `always-allow` to indicate whether the viewer requires focus before interacting with it. Refer to [interaction-policy in the XXX HtmlStartTag XXX
+ documentation](https://modelviewer.dev/docs/index.html#entrydocs-stagingandcameras-attributes-interactionPolicy). 
+		
+		
+		
+		ModelViewerProps.interactionPrompt
+		A string of either 'auto', 'when-focused', or 'none' indicating the conditions under which the visual and audible interaction prompt will display. Refer to [interaction-prompts in the XXX HtmlStartTag XXX
+ documentation](https://modelviewer.dev/docs/index.html#entrydocs-stagingandcameras-attributes-interactionPrompt). 
+		
+		
+		
+		ModelViewerProps.interactionPromptStyle
+		A string of either `wiggle` or `basic` indicating the presentation style of the interaction-prompt when it is raised. Refer to [interaction-prompt-style in the XXX HtmlStartTag XXX
+ documentation](https://modelviewer.dev/docs/index.html#entrydocs-stagingandcameras-attributes-interactionPromptStyle). 
+		
+		
+		
+		ModelViewerProps.interactionPromptThreshold
+		A number to indicate how long the model viewer should wait before prompting the user visually for interaction. Refer to [interaction-prompt-threshold in the XXX HtmlStartTag XXX
+ documentation](https://modelviewer.dev/docs/index.html#entrydocs-stagingandcameras-attributes-interactionPromptThreshold). 
+		
+		
+		
+		ModelViewerProps.interpolationDecay
+		A number indicating the rate of interpolation when the camera or model moves. Refer to [interpolation-decay in the XXX HtmlStartTag XXX
+ documentation](https://modelviewer.dev/docs/index.html#entrydocs-stagingandcameras-attributes-interpolationDecay). 
+		
+		
+		
+		ModelViewerProps.iosSrc
+		The url to a USDZ model which will be used on supported iOS 12+ devices via AR Quick Look on Safari. Refer to [ios-source in the XXX HtmlStartTag XXX
+ documentation](https://modelviewer.dev/docs/index.html#entrydocs-augmentedreality-attributes-iosSrc). 
+		
+		
+		
+		ModelViewerProps.loading
+		A string of either `auto`, `lazy`, or `eager` to indicate the conditions for preloading. Refer to [loading in the XXX HtmlStartTag XXX
+ documentation](https://modelviewer.dev/docs/index.html#entrydocs-loading-attributes-loading). 
+		
+		
+		
+		ModelViewerProps.maxCameraOrbit
+		A string of the maxiumum orbital values of the camera. Refer to [max-camera-orbit in the XXX HtmlStartTag XXX
+ documentation](https://modelviewer.dev/docs/index.html#entrydocs-stagingandcameras-attributes-maxCameraOrbit). 
+		
+		
+		
+		ModelViewerProps.maxFieldOfView
+		A number indicating the max field of view of the camera. Refer to [max-field-of-view in the XXX HtmlStartTag XXX
+ documentation](https://modelviewer.dev/docs/index.html#entrydocs-stagingandcameras-attributes-maxFieldOfView). 
+		
+		
+		
+		ModelViewerProps.minCameraOrbit
+		A string of the minimum orbital values of the camera. Refer to [min-camera-orbit in the XXX HtmlStartTag XXX
+ documentation](https://modelviewer.dev/docs/index.html#entrydocs-stagingandcameras-attributes-minCameraOrbit). 
+		
+		
+		
+		ModelViewerProps.minFieldOfView
+		A number indicating the min field of view of the camera. Refer to [min-field-of-view in the XXX HtmlStartTag XXX
+ documentation](https://modelviewer.dev/docs/index.html#entrydocs-stagingandcameras-attributes-minFieldOfView). 
+		
+		
+		
+		ModelViewerProps.onArStatus
+		The callback to invoke when the 'ar-status' event is triggered. Refer to [ar-status in the XXX HtmlStartTag XXX
+ documentation](https://modelviewer.dev/docs/index.html#entrydocs-augmentedreality-events-arStatus). 
+		
+		
+		
+		ModelViewerProps.onArTracking
+		The callback to invoke when the 'ar-tracking' event is triggered. Refer to [ar-tracking in the XXX HtmlStartTag XXX
+ documentation](https://modelviewer.dev/docs/index.html#entrydocs-augmentedreality-events-arTracking). 
+		
+		
+		
+		ModelViewerProps.onCameraChange
+		The callback to invoke when the 'camera-change' event is triggered. Refer to [camera-change in the XXX HtmlStartTag XXX
+ documentation](https://modelviewer.dev/docs/index.html#entrydocs-stagingandcameras-events-cameraChange). 
+		
+		
+		
+		ModelViewerProps.onEnvironmentChange
+		The callback to invoke when the 'environment-change' event is triggered. Refer to [environment-change in the XXX HtmlStartTag XXX
+ documentation](https://modelviewer.dev/docs/index.html#entrydocs-lightingandenv-events-environmentChange). 
+		
+		
+		
+		ModelViewerProps.onError
+		The callback to invoke when the 'error' event is triggered. Refer to [error in the XXX HtmlStartTag XXX
+ documentation](https://modelviewer.dev/docs/index.html#entrydocs-loading-events-error). 
+		
+		
+		
+		ModelViewerProps.onLoad
+		The callback to invoke when the `load` event is triggered. Refer to [load in the XXX HtmlStartTag XXX
+ documentation](https://modelviewer.dev/docs/index.html#entrydocs-loading-events-load). 
+		
+		
+		
+		ModelViewerProps.onModelVisibility
+		The callback to invoke when the 'model-visibility' event is triggered. Refer to [model-visibility in the XXX HtmlStartTag XXX
+ documentation](https://modelviewer.dev/docs/index.html#entrydocs-loading-events-modelVisibility). 
+		
+		
+		
+		ModelViewerProps.onPause
+		The callback to invoke when the 'pause' event is triggered. Refer to [pause in the XXX HtmlStartTag XXX
+ documentation](https://modelviewer.dev/docs/index.html#entrydocs-animation-events-pause). 
+		
+		
+		
+		ModelViewerProps.onPlay
+		The callback to invoke when the 'play' event is triggered. Refer to [play in the XXX HtmlStartTag XXX
+ documentation](https://modelviewer.dev/docs/index.html#entrydocs-animation-events-play). 
+		
+		
+		
+		ModelViewerProps.onPreload
+		The callback to invoke when the 'preload' event is triggered. Refer to [preload in the XXX HtmlStartTag XXX
+ documentation](https://modelviewer.dev/docs/index.html#entrydocs-loading-events-preload). 
+		
+		
+		
+		ModelViewerProps.onProgress
+		The callback to invoke when the 'progress' event is triggered. Refer to [progress in the XXX HtmlStartTag XXX
+ documentation](https://modelviewer.dev/docs/index.html#entrydocs-loading-events-progress). 
+		
+		
+		
+		ModelViewerProps.onQuickLookButtonTapped
+		The callback to invoke when the 'quick-look-button-tapped' event is triggered. Refer to [quick-look-button-tapped in the XXX HtmlStartTag XXX
+ documentation](https://modelviewer.dev/docs/index.html#entrydocs-augmentedreality-events-quickLookButtonTapped). 
+		
+		
+		
+		ModelViewerProps.onSceneGraphReady
+		The callback to invoke when the 'scene-graph-ready' event is triggered. Refer to [scene-graph-ready in the XXX HtmlStartTag XXX
+ documentation](https://modelviewer.dev/docs/index.html#entrydocs-scenegraph-events-sceneGraphReady). 
+		
+		
+		
+		ModelViewerProps.orbitSensitivity
+		A number to adjust the speed of theta and phi orbit interactions. Refer to [orbit-sensitivity in the XXX HtmlStartTag XXX
+ documentation](https://modelviewer.dev/docs/index.html#entrydocs-stagingandcameras-attributes-orbitSensitivity). 
+		
+		
+		
+		ModelViewerProps.orientation
+		A string to rotate the model. Refer to [orientation in the XXX HtmlStartTag XXX
+ documentation](https://modelviewer.dev/docs/index.html#entrydocs-scenegraph-attributes-orientation). 
+		
+		
+		
+		ModelViewerProps.poster
+		A URL to display an image instead of the model. This is useful for showing the user something before a model is loaded and ready to render. If no URL is provided, then [Model3d.previewImage](/api/storefront/latest/objects/model3d) is used. Refer to [poster in the XXX HtmlStartTag XXX
+ documentation](https://modelviewer.dev/docs/index.html#entrydocs-loading-attributes-poster). 
+		
+		
+		
+		ModelViewerProps.reveal
+		A string of either `auto`, `interaction`, or `manual` to indicate when the model should be revealed. Refer to [reveal in the XXX HtmlStartTag XXX
+ documentation](https://modelviewer.dev/docs/index.html#entrydocs-loading-attributes-reveal). 
+		
+		
+		
+		ModelViewerProps.rotationPerSecond
+		The speed of auto rotation. Refer to [rotation-per-second in the XXX HtmlStartTag XXX
+ documentation](https://modelviewer.dev/docs/index.html#entrydocs-stagingandcameras-attributes-rotationPerSecond). 
+		
+		
+		
+		ModelViewerProps.scale
+		A string to scale the model. Refer to [scale in the XXX HtmlStartTag XXX
+ documentation](https://modelviewer.dev/docs/index.html#entrydocs-scenegraph-attributes-scale). 
+		
+		
+		
+		ModelViewerProps.shadowIntensity
+		A number for the opacity of the shadow. Refer to [shadow-intensity in the XXX HtmlStartTag XXX
+ documentation](https://modelviewer.dev/docs/index.html#entrydocs-lightingandenv-attributes-shadowIntensity). 
+		
+		
+		
+		ModelViewerProps.shadowSoftness
+		A number for the bluriness of the shadow. Refer to [shadow-softness in the XXX HtmlStartTag XXX
+ documentation](https://modelviewer.dev/docs/index.html#entrydocs-lightingandenv-attributes-shadowSoftness). 
+		
+		
+		
+		ModelViewerProps.skyboxImage
+		A string for the background image of the scene. Refer to [skybox-image in the XXX HtmlStartTag XXX
+ documentation](https://modelviewer.dev/docs/index.html#entrydocs-lightingandenv-attributes-skyboxImage). 
+		
+		
+		
+		ModelViewerProps.touchAction
+		A string of `pan-x`, `pan-y`, or `none`. Refer to [touch-action in the XXX HtmlStartTag XXX
+ documentation](https://modelviewer.dev/docs/index.html#entrydocs-stagingandcameras-attributes-touch-action). 
+		
+		
+		
+		ModelViewerProps.variantName
+		A string to select a model variant by name. Refer to [variant-name in the XXX HtmlStartTag XXX
+ documentation](https://modelviewer.dev/docs/index.html#entrydocs-scenegraph-attributes-variantName). 
+		
+		
+		
+	Money()
+	The `Money` component renders a string of the Storefront API's [MoneyV2 object](/api/storefront/reference/common-objects/moneyv2) according to the `defaultLocale` in the `shopify.config.js` file. 
+	
+	
+	
+	MoneyProps
+		MoneyProps.as
+		An HTML tag to be rendered as the base element wrapper. The default is `div`. 
+		
+		
+		
+		MoneyProps.data
+		An object with fields that correspond to the Storefront API's [MoneyV2 object](/api/storefront/reference/common-objects/moneyv2). 
+		
+		
+		
+	NoStore()
+	OptionsInStockCallback
+	OptionWithValues
+		OptionWithValues.name
+		OptionWithValues.values
+	ProductDescription()
+	The `ProductDescription` component renders a `div` with the product's [`descriptionHtml`](/api/storefront/reference/products/product). It must be a descendent of the `ProductProvider` component. 
+	
+	
+	
+	ProductMetafield()
+	The `ProductMetafield` component renders a [`Metafield`](/api/hydrogen/components/primitive/metafield) component with the product metafield. It must be a descendent of a `ProductProvider` component. 
+	
+	
+	
+	ProductMetafieldProps
+		ProductMetafieldProps.keyName
+		A string corresponding to the [key](/api/storefront/reference/common-objects/metafield) of the product's metafield. 
+		
+		
+		
+		ProductMetafieldProps.namespace
+		A string corresponding to the [namespace](/api/storefront/reference/common-objects/metafield) of the product's metafield. 
+		
+		
+		
+		ProductMetafieldProps.variantId
+		The ID of the variant. If provided, then use the metafield corresponding to the variant ID instead of the product's metafield. 
+		
+		
+		
+	ProductOptionsHookValue
+		ProductOptionsHookValue.isOptionInStock
+		A callback that returns a boolean indicating if the option is in stock. 
+		
+		
+		
+		ProductOptionsHookValue.options
+		An array of the product's options and values. 
+		
+		
+		
+		ProductOptionsHookValue.selectedOptions
+		ProductOptionsHookValue.selectedSellingPlan
+		The selected selling plan. 
+		
+		
+		
+		ProductOptionsHookValue.selectedSellingPlanAllocation
+		The selected selling plan allocation. 
+		
+		
+		
+		ProductOptionsHookValue.selectedVariant
+		The selected variant. 
+		
+		
+		
+		ProductOptionsHookValue.sellingPlanGroups
+		The selling plan groups. 
+		
+		
+		
+		ProductOptionsHookValue.sellingPlanGroupsConnection
+		ProductOptionsHookValue.setSelectedOption
+		A callback to set the selected option. 
+		
+		
+		
+		ProductOptionsHookValue.setSelectedOptions
+		A callback to set multiple selected options at once. 
+		
+		
+		
+		ProductOptionsHookValue.setSelectedSellingPlan
+		A callback to set the selected selling plan to the one passed as an argument. 
+		
+		
+		
+		ProductOptionsHookValue.setSelectedVariant
+		A callback to set the selected variant to the variant passed as an argument. 
+		
+		
+		
+		ProductOptionsHookValue.variants
+		An array of the variant `nodes` from the `VariantConnection`. 
+		
+		
+		
+		ProductOptionsHookValue.variantsConnection
+	ProductPrice()
+	The `ProductPrice` component renders a `Money` component with the product [`priceRange`](/api/storefront/reference/products/productpricerange)'s `maxVariantPrice` or `minVariantPrice`, for either the regular price or compare at price range. It must be a descendent of the `ProductProvider` component. 
+	
+	
+	
+	ProductPriceProps
+		ProductPriceProps.priceType
+		The type of price. Valid values: `regular` (default) or `compareAt`. 
+		
+		
+		
+		ProductPriceProps.valueType
+		The type of value. Valid values: `min` (default), `max` or `unit`. 
+		
+		
+		
+		ProductPriceProps.variantId
+		The ID of the variant. 
+		
+		
+		
+	ProductProvider()
+	The `ProductProvider` component sets up a context with product details. Descendents of this component can use the `useProduct` hook. 
+	
+	
+	
+	ProductProviderProps
+		ProductProviderProps.children
+		A `ReactNode` element. 
+		
+		
+		
+		ProductProviderProps.data
+		A [Product object](/api/storefront/reference/products/product). 
+		
+		
+		
+		ProductProviderProps.initialVariantId
+		The initially selected variant. If this is missing, then `selectedVariantId` in the returned `object` from the `useProduct` hook uses the first available variant or the first variant (if none are available). 
+		
+		
+		
+	ProductTitle()
+	The `ProductTitle` component renders a `span` element (or the type of HTML element specified by the `as` prop) with the product's [`title`](/api/storefront/reference/products/product). It must be a descendent of the `ProductProvider` component. 
+	
+	
+	
+	Route()
+	The `Route` component is used to set up a route in Hydrogen that's independent of the file system. Routes are matched in the order that they're defined. 
+	
+	
+	
+	Router()
+	The `Router` component provides the context for routing in your Hydrogen app. 
+	
+	
+	
+	SelectedOptions
+	SelectedSellingPlanCallback
+	SelectOptionCallback
+	SelectOptionsCallback
+	SelectVariantCallback
+	Seo()
+	The `Seo` component renders SEO information on a webpage. 
+	
+	
+	
+	SeoProps
+	ServerState
+		ServerState.(indexer)
+		ServerState.pathname
+		ServerState.search
+	ServerStateContext
+	ServerStateContextValue
+		ServerStateContextValue.pending
+		ServerStateContextValue.serverState
+		ServerStateContextValue.setServerState
+	ServerStateProvider()
+	setLogger()
+	setLoggerOptions()
+	ShopifyProvider()
+	The `ShopifyProvider` component wraps your entire app and provides support for hooks. You should place it in your app's entry point component. For example, `<App>`. If you're using the Hydrogen framework, you don't need to add this provider because it's automatically wrapped around your app in `renderHydrogen()`. 
+	
+	
+	
+	ShopPayButton()
+	The `ShopPayButton` component renders a button that redirects to the Shop Pay checkout. 
+	
+	
+	
+	ShopPayButtonProps
+	State
+	Status
+	useCart()
+	The `useCart` hook provides access to the cart object. It must be a descendent of a `CartProvider` component. 
+	
+	
+	
+	useCartFetch()
+	useCartLine()
+	The `useCartLine` hook provides access to the cart line object. It must be a descendent of a `CartProvider` component. 
+	
+	
+	
+	useCountry()
+	The `useCountry` hook returns a tuple of the current localization country and a function for updating it. It must be a descendent of a `LocalizationProvider` component. 
+	
+	
+	
+	useInstantCheckout()
+	useLoadScript()
+	The `useLoadScript` hook loads an external script tag on the client-side. 
+	
+	
+	
+	useMeasurement()
+	useMoney()
+	The `useMoney` hook takes a [MoneyV2 object](/api/storefront/reference/common-objects/moneyv2) and returns a default-formatted string of the amount with the correct currency indicator, along with some of the parts provided by [Intl.NumberFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat). 
+	
+	
+	
+	useParsedMetafields()
+	The `useParsedMetafields` hook transforms a [MetafieldConnection](/api/storefront/reference/common-objects/metafieldconnection) in an array of metafields whose `values` have been parsed according to the metafield `type`. 
+	
+	
+	
+	useProduct()
+	The `useProduct` hook returns the product object of the nearest `ProductProvider`. It must be a descendent of a `ProductProvider` component. 
+	
+	
+	
+	useProductOptions()
+	The `useProductOptions` hook returns an object that enables you to keep track of the selected variant and/or selling plan state, as well as callbacks for modifying the state. 
+	
+	
+	
+	useQuery()
+	The `useQuery` hook executes an asynchronous operation like `fetch` in a way that supports [Suspense](https://reactjs.org/docs/concurrent-mode-suspense.html). It's based on [react-query](https://react-query.tanstack.com/reference/useQuery). You can use this hook to call any third-party APIs from a server component. 
+	
+	
+	
+	useRouteParams()
+	The `useRouteParams` hook retrieves the parameters of an active route. The hook is available in both server and client components. 
+	
+	
+	
+	useShop()
+	The `useShop` hook provides access to values within `shopify.config.js`. It must be a descendent of a `ShopifyProvider` component. 
+	
+	
+	
+	useShopQuery()
+	The `useShopQuery` hook allows you to make server-only GraphQL queries to the Storefront API. It must be a descendent of a `ShopifyProvider` component. 
+	
+	
+	
+	UseShopQueryResponse
+		UseShopQueryResponse.data
+		The data returned by the query. 
+		
+		
+		
+		UseShopQueryResponse.errors
+	useUrl()
+	The `useUrl` hook retrieves the current URL in a server or client component. 
+	
+	
+	
+	Video()
+	The `Video` component renders a `video` for the Storefront API's [Video object](/api/storefront/reference/products/video). 
+	
+	
+	
+	VideoProps
