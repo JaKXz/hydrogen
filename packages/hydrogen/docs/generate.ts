@@ -6,7 +6,6 @@ import {
   ExtractorResult,
 } from '@microsoft/api-extractor';
 import {traverseMembers} from './traverse-members';
-import {traverseNodes} from './traverse-nodes';
 
 const apiExtractorConfig: string = path.join(__dirname, 'api-extractor.json');
 // Load and parse the api-extractor.json file
@@ -19,10 +18,7 @@ const extractorResult: ExtractorResult = Extractor.invoke(extractorConfig, {
   // Equivalent to the "--verbose" command-line parameter
   // showVerboseMessages: true,
   messageCallback: (message) => {
-    // delete message;
-    if (message.messageId.includes('ae')) {
-      console.log(message);
-    }
+    message = undefined;
   },
 });
 
@@ -39,6 +35,4 @@ const apiPackage: ApiPackage = apiModel.loadPackage(
   path.join(__dirname, 'temp', 'hydrogen.api.json')
 );
 
-for (const apiItem of apiPackage.members) {
-  traverseMembers(apiItem);
-}
+console.log([...apiPackage.members].reduce(traverseMembers, {}));

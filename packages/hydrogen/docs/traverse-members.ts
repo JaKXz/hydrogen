@@ -1,25 +1,38 @@
 import {ApiDocumentedItem, ApiItem} from '@microsoft/api-extractor-model';
-import {traverseNodes} from "./traverse-nodes";
+import {traverseNodes} from './traverse-nodes';
 
-export function traverseMembers(member: ApiItem, depth = 0): any {
-  const name = member.getScopedNameWithinPackage();
-  console.log(formatDepth(depth) + name);
+export function traverseMembers(acc, member: ApiItem) {
+  const name = member.getScopedNameWithinPackage() || member.displayName;
+  if (member.members) {
+    if (!acc[name]) {
+      acc[name] = {};
+    }
 
-  if (member instanceof ApiDocumentedItem && member.tsdocComment) {
-    Object.values(member.tsdocComment).forEach((section) => {
-      if (section?.kind || section?.nodes) {
-        console.log(formatDepth(depth) + traverseNodes(section));
-      }
-    });
+    if (member instanceof ApiDocumentedItem && member.tsdocComment) {
+      return {
+        ...acc,
+        [name]: Object.values(member.tsdocComment)
+          .filter((section) => section?.kind || section?.nodes)
+          .map(traverseNodes)
+          .join(''),
+      };
+    }
+
+    return {
+      ...acc,
+      [name]: [...member.members].reduce(traverseMembers, acc[name]),
+    };
   }
 
-  for (const deepMember of member.members) {
-    traverseMembers(deepMember, depth + 1);
-  }
+  return acc;
 }
 
-function formatDepth(depth: number): string {
-  return Array.from({length: depth})
-    .map(() => '\t')
-    .join('');
+/*
+{
+  "hydrogen": {
+    "AddToCart": {
+
+    },
+  }
 }
+ */
