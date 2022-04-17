@@ -1,5 +1,6 @@
 import {ApiModel, ApiPackage} from '@microsoft/api-extractor-model';
 import {join} from 'path';
+import {writeFileSync} from 'fs';
 import {
   Extractor,
   ExtractorConfig,
@@ -30,4 +31,7 @@ const apiPackage: ApiPackage = apiModel.loadPackage(
   join(__dirname, 'temp', 'hydrogen.api.json')
 );
 
-console.log([...apiPackage.members].reduce(traverseMembers, {}));
+writeFileSync(
+  './docs/schema.json',
+  JSON.stringify([...apiPackage.members].reduce(traverseMembers, {}), null, 2)
+);
